@@ -132,7 +132,6 @@ const Index = () => {
       dispatch({ type: MetamaskActions.SetError, payload: e });
     }
   };
-
   return (
     <Container>
       <Heading>
