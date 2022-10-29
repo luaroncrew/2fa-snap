@@ -106,7 +106,6 @@ export const Home = () => {
     try {
       await connectSnap();
       const installedSnap = await getSnap();
-
       dispatch({
         type: MetamaskActions.SetInstalled,
         payload: installedSnap,

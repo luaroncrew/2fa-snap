@@ -1,4 +1,4 @@
-import {OnRpcRequestHandler} from '@metamask/snap-types';
+import { OnRpcRequestHandler } from '@metamask/snap-types';
 import axios from 'axios';
 
 /**
@@ -9,6 +9,20 @@ import axios from 'axios';
  */
 export const getMessage = (originString: string): string =>
   `Hello, ${originString}!`;
+
+const check2FACode = async (origin: string) => {
+  const response = await wallet.request({
+    method: 'snap_confirm',
+    params: [
+      {
+        prompt: getMessage(origin),
+        description: '2FA security',
+        textInput: '2FA code',
+      },
+    ],
+  });
+  console.log({ response });
+};
 
 /**
  * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
@@ -27,20 +41,8 @@ export const onRpcRequest: OnRpcRequestHandler = async ({
 }) => {
   switch (request.method) {
     case 'hello':
-      await wallet.request({
-        method: 'snap_confirm',
-        params: [
-          {
-            prompt: getMessage(origin),
-            description: '2FA security',
-            textInput: '2FA code',
-          },
-        ],
-      });
-      //
-      // // eslint-disable-next-line no-case-declarations
-      const response = axios.get('https://google.com');
-      return response;
+      return check2FACode(origin);
+
     default:
       throw new Error('Method not found.');
   }
