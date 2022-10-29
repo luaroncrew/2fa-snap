@@ -13,6 +13,9 @@ type SecondStepProps = {
 
 const Wrapper = styled.div`
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const initialValues = [

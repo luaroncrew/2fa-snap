@@ -12,6 +12,7 @@ const Container = styled.div`
   flex: 1;
   margin-top: 3.2rem;
   margin-bottom: 3.2rem;
+  position: relative;
   ${({ theme }) => theme.mediaQueries.small} {
     padding-left: 2.4rem;
     padding-right: 2.4rem;

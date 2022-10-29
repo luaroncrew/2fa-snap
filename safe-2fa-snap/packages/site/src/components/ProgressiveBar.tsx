@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 type ProgressiveBarProps = {
-  step: number
-}
+  step: number;
+};
 
 const StepRound = styled.div`
   height: 50px;
@@ -16,15 +16,17 @@ const StepRound = styled.div`
 `;
 
 const Bar = styled.div`
-  height: 4px;
-  width: 416px;
+  width: 4px;
+  height: 200px;
   background-color: white;
 `;
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 1034px;
+  position: absolute;
+  left: 170px;
 `;
 
 const ProgressiveBar = ({ step }: ProgressiveBarProps) => {

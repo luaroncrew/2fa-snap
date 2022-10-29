@@ -12,6 +12,12 @@ type FirstStepProps = {
   onSubmit: () => void;
 };
 
+const WrapperFirstStep = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -35,7 +41,7 @@ const FirstStep = ({
     return setDisabled(true);
   }, [ownerAddress, iExecAddress, safeName]);
   return (
-    <>
+    <WrapperFirstStep>
       <h1>First step</h1>
       <SafeLogo witdh={'50px'} />
       <h2>SAFE setup</h2>
@@ -62,7 +68,7 @@ const FirstStep = ({
           onSubmit={onSubmit}
         />
       </FormContainer>
-    </>
+    </WrapperFirstStep>
   );
 };
 
