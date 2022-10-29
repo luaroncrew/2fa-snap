@@ -3,6 +3,7 @@ import { useState } from 'react';
 import FirstStep from '../components/FirstStep';
 import SecondStep from '../components/SecondStep';
 import ThirdStep from '../components/ThirdStep';
+import ProgressiveBar from '../components/ProgressiveBar';
 
 const Container = styled.div`
   display: flex;
@@ -29,8 +30,14 @@ const OnBoarding = () => {
   const nextStep = () => {
     step < 3 ? setStep(step + 1) : setStep(1);
   };
+
+  const handlePrevious = () => {
+    setStep(step - 1);
+  };
+
   return (
     <Container>
+      <ProgressiveBar step={step} />
       {step === 1 && (
         <FirstStep
           safeName={safeName}
@@ -40,7 +47,9 @@ const OnBoarding = () => {
           onSubmit={nextStep}
         />
       )}
-      {step === 2 && <SecondStep onSubmit={nextStep} />}
+      {step === 2 && (
+        <SecondStep onSubmit={nextStep} previous={handlePrevious} />
+      )}
       {step === 3 && (
         <ThirdStep
           safeName={safeName}
@@ -48,6 +57,7 @@ const OnBoarding = () => {
           ownerAddress={ownerAddress}
           iExecAddress={iExecAddress}
           onSubmit={nextStep}
+          previous={handlePrevious}
         />
       )}
     </Container>

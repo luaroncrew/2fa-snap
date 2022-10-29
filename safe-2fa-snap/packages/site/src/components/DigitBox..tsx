@@ -3,6 +3,7 @@ import styled from 'styled-components';
 type DigitBoxProps = {
   value: string;
   setValue: (value: any) => void;
+  name?: string;
 };
 
 const SingleDigitInput = styled.input`
@@ -20,8 +21,8 @@ const SingleDigitInput = styled.input`
   }
 `;
 
-const DigitBox = ({ value, setValue }: DigitBoxProps) => {
-  return <SingleDigitInput value={value} onChange={setValue} />;
+const DigitBox = ({ value, setValue, name = 'input' }: DigitBoxProps) => {
+  return <SingleDigitInput value={value} onChange={setValue} name={name} />;
 };
 
 export default DigitBox;

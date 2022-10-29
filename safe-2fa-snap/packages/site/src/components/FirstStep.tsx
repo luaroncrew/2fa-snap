@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { ReactComponent as SafeLogo } from '../assets/safe_logo.svg';
-import CustomButton from './CustomButton';
+import PrimaryButton from './PrimaryButton';
 import InputText from './InputText';
 
 type FirstStepProps = {
@@ -56,7 +56,7 @@ const FirstStep = ({
           placeHolder={'iExec’s address: to be verified'}
           disabled={true}
         />
-        <CustomButton
+        <PrimaryButton
           disabled={disable}
           content={'Setup iExec address'}
           onSubmit={onSubmit}

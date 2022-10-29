@@ -2,11 +2,13 @@ import QRCode from 'react-qr-code';
 import { useEffect, useState, useReducer } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as IExecLogo } from '../assets/iExec_logo.svg';
-import CustomButton from './CustomButton';
+import PrimaryButton from './PrimaryButton';
 import DigitBox from './DigitBox.';
+import SecondaryButton from './SecondaryButton';
 
 type SecondStepProps = {
   onSubmit: () => void;
+  previous: () => void;
 };
 
 const Wrapper = styled.div`
@@ -46,6 +48,14 @@ function reducer(state: any, action: any) {
   if (action.value.length < 2 && regex.test(action.value)) {
     return state.map((value: { id: number }) => {
       if (value.id === action.type) {
+        const nextSibling = document.querySelector(
+          `input[name=digit-input-${
+            action.value === '' ? value.id - 2 : value.id
+          }]`,
+        ) as HTMLElement;
+        if (nextSibling) {
+          nextSibling.focus();
+        }
         return { ...value, valueInput: action.value };
       }
       return value;
@@ -54,7 +64,7 @@ function reducer(state: any, action: any) {
   return state;
 }
 
-const SecondStep = ({ onSubmit }: SecondStepProps) => {
+const SecondStep = ({ onSubmit, previous }: SecondStepProps) => {
   const [disabled, setDisabled] = useState<boolean>(true);
   const [code, setCode] = useState<string>('');
   const [values, dispatch] = useReducer(reducer, initialValues);
@@ -97,16 +107,23 @@ const SecondStep = ({ onSubmit }: SecondStepProps) => {
           margin: '10px auto',
         }}
       >
-        {values.map((value: any) => (
+        {values.map((value: any, key: number) => (
           <DigitBox
             value={value.valueInput}
             setValue={(e) =>
               handleValue({ value: e.target.value, id: value.id })
             }
+            name={`digit-input-${key.toString()}`}
           />
         ))}
       </div>
-      <CustomButton content={'Setup iExec address'} disabled={disabled} onSubmit={onSubmit} />
+      <PrimaryButton
+        content={'Setup iExec address'}
+        disabled={disabled}
+        onSubmit={onSubmit}
+      />
+      <br />
+      <SecondaryButton content={'Cancel'} disabled={false} onClick={previous} />
     </Wrapper>
   );
 };

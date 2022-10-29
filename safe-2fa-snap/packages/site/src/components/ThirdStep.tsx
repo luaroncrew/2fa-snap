@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { useEffect, useState } from 'react';
 import { ReactComponent as VaultLogo } from '../assets/vault_logo.svg';
 import InputText from './InputText';
-import CustomButton from './CustomButton';
+import PrimaryButton from './PrimaryButton';
+import SecondaryButton from './SecondaryButton';
 
 type ThirdStepProps = {
   safeName: string;
@@ -10,6 +11,7 @@ type ThirdStepProps = {
   iExecAddress: string;
   setiExecAddress: (address: string) => void;
   onSubmit: () => void;
+  previous: () => void;
 };
 
 const FormContainer = styled.div`
@@ -24,6 +26,7 @@ const ThirdStep = ({
   iExecAddress,
   setiExecAddress,
   onSubmit,
+  previous,
 }: ThirdStepProps) => {
   const [disable, setDisabled] = useState<boolean>(true);
 
@@ -50,11 +53,19 @@ const ThirdStep = ({
           setInput={setiExecAddress}
           placeHolder={'iExec’s address: to be verified'}
         />
-        <CustomButton
-          disabled={disable}
-          content={'Deploy Contract'}
-          onSubmit={onSubmit}
-        />
+        <div>
+          <PrimaryButton
+            disabled={disable}
+            content={'Deploy Contract'}
+            onSubmit={onSubmit}
+          />
+          <br />
+          <SecondaryButton
+            content={'Cancel'}
+            disabled={false}
+            onClick={previous}
+          />
+        </div>
       </FormContainer>
     </>
   );
