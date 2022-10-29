@@ -1,47 +1,82 @@
 import { OnRpcRequestHandler } from '@metamask/snap-types';
-import axios from 'axios';
+import { IExec } from 'iexec';
+import { providers } from 'ethers';
+const appAddress =
+  process.env.APP_ADDRESS || '0xB901732A47153F3e868e4e0Bfa6850BCB8f534E8';
 
-/**
- * Get a message from the origin. For demonstration purposes only.
- *
- * @param originString - The origin string.
- * @returns A message based on the origin.
- */
-export const getMessage = (originString: string): string =>
-  `Hello, ${originString}!`;
+const provider = new providers.JsonRpcProvider(
+  'https://goerli.infura.io/v3/77490ac5e5714bd38faf467630943686',
+  5,
+);
 
-const check2FACode = async (origin: string) => {
+const iexec = new IExec({ ethProvider: provider });
+
+const sendTOTP = async (totp: string) => {
+  // send this code to IExec app
+  console.log({ totp, appAddress });
+  const { orders } = await iexec.orderbook.fetchAppOrderbook(appAddress);
+  const appOrder = orders?.[0]?.order;
+  const { orders: workerpoolOrders } =
+    await iexec.orderbook.fetchWorkerpoolOrderbook({ category: 0 });
+
+  const workerpoolOrder = workerpoolOrders?.[0]?.order;
+
+  const requestOrderToSign = await iexec.order.createRequestorder({
+    app: appAddress,
+    appmaxprice: appOrder.appprice,
+    workerpoolmaxprice: workerpoolOrder.workerpoolprice,
+    category: 0,
+    volume: 1,
+    params: totp,
+  });
+
+  const requestOrder = await iexec.order.signRequestorder(requestOrderToSign);
+
+  const res = await iexec.order.matchOrders({
+    apporder: appOrder,
+    requestorder: requestOrder,
+    workerpoolorder: workerpoolOrder,
+  });
+
+  console.log({ res });
+};
+
+const transaction2FA = async (request: any) => {
+  // Choose account for transaction
+  await wallet.request({
+    method: 'eth_requestAccounts',
+  });
+
+  // Sign transaction
+  /* await wallet.request({
+   method: 'eth_sendTransaction',
+   params: request.params,
+   });*/
+
+  // Request TOTP code for 2FA
   const response = await wallet.request({
     method: 'snap_confirm',
     params: [
       {
-        prompt: getMessage(origin),
+        prompt: 'Transaction (2FA protection)',
         description: '2FA security',
-        textInput: '2FA code',
+        textInput: '2fa_code',
       },
     ],
   });
-  console.log({ response });
+
+  if (response && '2fa_code' in response) {
+    const code = response['2fa_code'];
+    await sendTOTP(code);
+  }
+
+  console.log({ response, request });
 };
 
-/**
- * Handle incoming JSON-RPC requests, sent through `wallet_invokeSnap`.
- *
- * @param args - The request handler args as object.
- * @param args.origin - The origin of the request, e.g., the website that
- * invoked the snap.
- * @param args.request - A validated JSON-RPC request object.
- * @returns `null` if the request succeeded.
- * @throws If the request method is not valid for this snap.
- * @throws If the `snap_confirm` call failed.
- */
-export const onRpcRequest: OnRpcRequestHandler = async ({
-  origin,
-  request,
-}) => {
+export const onRpcRequest: OnRpcRequestHandler = async ({ request }) => {
   switch (request.method) {
-    case 'hello':
-      return check2FACode(origin);
+    case '2FA_transaction':
+      return transaction2FA(request);
 
     default:
       throw new Error('Method not found.');

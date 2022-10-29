@@ -1,7 +1,11 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
 import { MetamaskActions, MetaMaskContext } from '../hooks';
-import {connectSnap, getSnap, sendHello, shouldDisplayReconnectButton} from '../utils';
+import {
+  connectSnap, doTransaction,
+  getSnap,
+  shouldDisplayReconnectButton,
+} from '../utils';
 import {
   ConnectButton,
   InstallFlaskButton,
@@ -117,7 +121,6 @@ const Index = () => {
     try {
       const iExecAddress = '';
       await createSafe(iExecAddress);
-
       // await initiateTx('0xCEEd1c67Fa8c90d5e068a7D7c301717f373f52bE', {
       //   to: '0x5e7Fc13FCc408F4d89C8E441EC5eCb1d3D8B2850',
       //   value: '100000',

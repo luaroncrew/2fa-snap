@@ -5,6 +5,7 @@ import {
 import ZENDESK_URLS from '../../../../../helpers/constants/zendesk-url';
 
 function getValues(pendingApproval, t, actions) {
+  const formState = {};
   const { title, description, textAreaContent, textInput } =
     pendingApproval.requestData;
 
@@ -44,9 +45,14 @@ function getValues(pendingApproval, t, actions) {
             {
               element: 'input',
               key: 'input',
+              name: textInput,
               props: {
                 className: 'snap-confirm--text-input',
                 variant: TYPOGRAPHY.H6,
+                onChange: (e) => {
+                  const { value } = e.target;
+                  formState[textInput] = value;
+                },
                 align: 'center',
                 boxProps: {
                   margin: [0, 0, 4],
@@ -110,7 +116,7 @@ function getValues(pendingApproval, t, actions) {
     ],
     approvalText: t('approveButtonText'),
     cancelText: t('reject'),
-    onApprove: () => actions.resolvePendingApproval(pendingApproval.id, true),
+    onApprove: () => actions.resolvePendingApproval(pendingApproval.id, formState),
     onCancel: () => actions.resolvePendingApproval(pendingApproval.id, false),
   };
 }
