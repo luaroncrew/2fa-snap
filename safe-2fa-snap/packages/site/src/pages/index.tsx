@@ -9,7 +9,7 @@ import {
   SendHelloButton,
   Card,
 } from '../components';
-import { createSafe } from '../../utils/create-safe';
+import {createSafe, initiateTx} from '../../utils/create-safe';
 
 const Container = styled.div`
   display: flex;
@@ -115,7 +115,15 @@ const Index = () => {
 
   const handleSendHelloClick = async () => {
     try {
-      await createSafe();
+      const iExecAddress = '';
+      await createSafe(iExecAddress);
+
+      // await initiateTx('0xCEEd1c67Fa8c90d5e068a7D7c301717f373f52bE', {
+      //   to: '0x5e7Fc13FCc408F4d89C8E441EC5eCb1d3D8B2850',
+      //   value: '100000',
+      //   data: '0x',
+      //   gasToken: null
+      // });
       // await sendHello();
     } catch (e) {
       console.error(e);
