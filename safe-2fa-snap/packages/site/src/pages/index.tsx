@@ -1,12 +1,7 @@
 import { useContext } from 'react';
 import styled from 'styled-components';
 import { MetamaskActions, MetaMaskContext } from '../hooks';
-import {
-  connectSnap,
-  getSnap,
-  sendHello,
-  shouldDisplayReconnectButton,
-} from '../utils';
+import {connectSnap, getSnap, sendHello, shouldDisplayReconnectButton} from '../utils';
 import {
   ConnectButton,
   InstallFlaskButton,
@@ -14,6 +9,7 @@ import {
   SendHelloButton,
   Card,
 } from '../components';
+import { createSafe } from '../../utils/create-safe';
 
 const Container = styled.div`
   display: flex;
@@ -119,7 +115,8 @@ const Index = () => {
 
   const handleSendHelloClick = async () => {
     try {
-      await sendHello();
+      await createSafe();
+      // await sendHello();
     } catch (e) {
       console.error(e);
       dispatch({ type: MetamaskActions.SetError, payload: e });
