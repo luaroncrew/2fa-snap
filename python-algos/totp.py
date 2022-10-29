@@ -2,29 +2,17 @@ import base64
 import hmac
 import struct
 import sys
+import os
+import json
 import time
+import secrets
+
+iexec_out = os.environ['IEXEC_OUT']
+iexec_in = os.environ['IEXEC_IN']
 
 
-def setup():
-    # get a random value for secret generation
-    # generate secret
-    # send secret to user (once)
-    # put secret in a storage
-    pass
-
-
-def is_valid(client_public_key, totp):
-    # get client's pubkey from request
-    # get his secret from storage
-    # generate a totp using his secret
-    # compare newly generated totp with the totp sent by the user
-    # if valid, sign safe contract
-    pass
-
-
-def generate_secret():
-    # randomly generates a secret key for user's 2FA
-    pass
+def totp(key, time_step=30, digits=6, digest='sha1'):
+    return hotp(key, int(time.time() / time_step), digits, digest)
 
 
 def hotp(key, counter, digits=6, digest='sha1'):
@@ -36,5 +24,35 @@ def hotp(key, counter, digits=6, digest='sha1'):
     return str(binary)[-digits:].zfill(digits)
 
 
-def totp(key, time_step=30, digits=6, digest='sha1'):
-    return hotp(key, int(time.time() / time_step), digits, digest)
+def setup():
+    secret = secrets.token_urlsafe(16)
+    put_secret_in_storage(secret)
+    send_secret(secret)
+
+
+def put_secret_in_storage(secret: str):
+    pass
+    
+
+def send_secret(secret: str):
+    pass
+
+
+def get_secret_from_storage(pubkey: str):
+    pass
+
+
+def is_valid(client_public_key, totp_user):
+    # secret = get_secret_from_storage(client_public_key)
+    secret = "TESTSECRET"
+    totp_server = totp(secret)
+    with open(iexec_out + '/result.txt', 'w+') as f:
+        f.write(totp_server)
+        print(totp_server)
+        
+    if totp_server == totp_user:
+        sign_transaction()
+        
+
+def sign_transaction():
+    pass

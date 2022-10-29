@@ -16,10 +16,10 @@
     "callback": "0x0000000000000000000000000000000000000000"
   },
   "app": {
-    "owner": "0x3CB3574F1136eC3f157e4b274D63Ec6D506b54fA",
+    "owner": "0x84D8F99df9Ec78c92D04A83D44F5750a816fc261",
     "name": "python-hello-world",
     "type": "DOCKER",
-    "multiaddr": "docker.io/iexechub/python-hello-world:1.0.0",
-    "checksum": "0xa28d8ae83ae586b4c8addd60413a8302798891411a8f87b5f0987050d0d73816"
+    "multiaddr": "registry.hub.docker.com/luaroncrew/my-hello-world:1.0.0",
+    "checksum": "0xda609e145e4972be7a69dc02f23d093e9f0af245631f61588b1b1c7ad41c78cd"
   }
 }

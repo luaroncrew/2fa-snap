@@ -5,6 +5,9 @@ coverage/
 .cache/
 public/
 
+.idea/workspace.xml
+
+
 # Logs
 logs
 *.log
