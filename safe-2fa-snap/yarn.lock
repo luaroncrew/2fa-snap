@@ -4021,9 +4021,8 @@ __metadata:
     iexec: ^7.2.2
     prettier: ^2.2.1
     prettier-plugin-packagejson: ^2.2.18
-    stream-browserify: ^3.0.0
     react-qr-code: ^2.0.8
-    react-transition-group: ^4.4.5
+    stream-browserify: ^3.0.0
     typescript: ^4.7.4
   languageName: unknown
   linkType: soft
