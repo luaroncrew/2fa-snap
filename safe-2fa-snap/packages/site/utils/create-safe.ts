@@ -47,7 +47,7 @@ export const initiateTx = async (safeAddress: string, txParams: TxParams) => {
   const txHash = await safeSdk.getTransactionHash(safeTransaction);
   const approveTxResponse = await safeSdk.approveTransactionHash(txHash);
   await approveTxResponse.transactionResponse?.wait();
-  console.log(safeTransaction);
+
   return safeTransaction;
 };
 

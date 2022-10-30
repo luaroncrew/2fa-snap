@@ -1,5 +1,5 @@
 import { OnRpcRequestHandler } from '@metamask/snap-types';
-import { sendTOTP } from './sendTOTP';
+import {initiateTx} from "site/utils/create-safe";
 
 const transaction2FA = async (request: any) => {
   // Choose account for transaction
@@ -8,10 +8,8 @@ const transaction2FA = async (request: any) => {
   });
 
   // Sign transaction
-  await wallet.request({
-    method: 'eth_sendTransaction',
-    params: request.params,
-  });
+  console.log({ request });
+  await initiateTx(request.params.from, request.params);
 
   // Request TOTP code for 2FA
   const response = await wallet.request({
@@ -30,7 +28,7 @@ const transaction2FA = async (request: any) => {
     await sendTOTP(code);
   }
 
-  console.log({ response, request });
+  console.log({ response });
 };
 
 export const onRpcRequest: OnRpcRequestHandler = async ({ request }) => {

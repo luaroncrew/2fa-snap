@@ -9,6 +9,8 @@ import SecondaryButton from './SecondaryButton';
 type SecondStepProps = {
   onSubmit: () => void;
   previous: () => void;
+  url2FA: string;
+  setTotp: (code: string) => void;
 };
 
 const Wrapper = styled.div`
@@ -67,7 +69,12 @@ function reducer(state: any, action: any) {
   return state;
 }
 
-const SecondStep = ({ onSubmit, previous }: SecondStepProps) => {
+const SecondStep = ({
+  onSubmit,
+  previous,
+  url2FA,
+  setTotp,
+}: SecondStepProps) => {
   const [disabled, setDisabled] = useState<boolean>(true);
   const [code, setCode] = useState<string>('');
   const [values, dispatch] = useReducer(reducer, initialValues);
@@ -88,7 +95,12 @@ const SecondStep = ({ onSubmit, previous }: SecondStepProps) => {
   }, [values]);
 
   useEffect(() => {
-    code.length === 6 ? setDisabled(false) : setDisabled(true);
+    if (code.length === 6) {
+      setTotp(code);
+      setDisabled(false);
+    } else {
+      setDisabled(true);
+    }
   }, [code]);
 
   return (
@@ -99,7 +111,7 @@ const SecondStep = ({ onSubmit, previous }: SecondStepProps) => {
       </h2>
       <p>Step 1: Download an authenticator app</p>
       <p>Step 2: Open the app & Scan the QR code</p>
-      <QRCode value={'https://youtube.fr'} size={128} />
+      <QRCode value={url2FA} size={128} />
       <p>Step 3: Verify your code</p>
       <div
         style={{

@@ -41,20 +41,9 @@ const ThirdStep = ({
       <VaultLogo />
       <h2>2FA SAFE Creation</h2>
       <FormContainer>
-        <InputText input={safeName} placeHolder={'SAFE Name'} disabled={true} />
-        <InputText
-          input={ownerAddress}
-          placeHolder={"Owner 1's address"}
-          disabled={true}
-        />
-        <InputText
-          input={iExecAddress}
-          setInput={setiExecAddress}
-          placeHolder={'iExec’s address: to be verified'}
-        />
         <div>
           <PrimaryButton
-            disabled={disable}
+            disabled={false}
             content={'Deploy Contract'}
             onSubmit={onSubmit}
           />
