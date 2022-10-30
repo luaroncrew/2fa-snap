@@ -44,8 +44,7 @@ const FirstStep = ({
   }, [ownerAddress, iExecAddress, safeName]);
   return (
     <WrapperFirstStep>
-      <h1>First step</h1>
-      <SafeLogo witdh={'50px'} />
+      <SafeLogo width={'100px'} />
       <h2>SAFE setup</h2>
       <FormContainer>
         <InputText

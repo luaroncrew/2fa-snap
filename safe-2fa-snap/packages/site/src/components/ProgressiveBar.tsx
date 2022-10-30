@@ -16,14 +16,13 @@ const StepRound = styled.div`
 `;
 
 const Bar = styled.div`
-  width: 4px;
-  height: 200px;
+  height: 4px;
+  width: 25vw;
   background-color: white;
 `;
 
 const Wrapper = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 50px 0;
 `;
