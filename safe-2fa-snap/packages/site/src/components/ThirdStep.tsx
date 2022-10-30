@@ -38,7 +38,6 @@ const ThirdStep = ({
 
   return (
     <>
-      <h1>Third step</h1>
       <VaultLogo />
       <h2>2FA SAFE Creation</h2>
       <FormContainer>

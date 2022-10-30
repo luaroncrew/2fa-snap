@@ -6,13 +6,11 @@ import ThirdStep from '../components/ThirdStep';
 import ProgressiveBar from '../components/ProgressiveBar';
 
 const Container = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex: 1;
-  margin-top: 3.2rem;
-  margin-bottom: 3.2rem;
-  position: relative;
   ${({ theme }) => theme.mediaQueries.small} {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
@@ -21,6 +19,14 @@ const Container = styled.div`
     width: auto;
   }
 `;
+
+const FlexBox = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
 const OnBoarding = () => {
   const [step, setStep] = useState<number>(1);
@@ -33,12 +39,13 @@ const OnBoarding = () => {
   };
 
   const handlePrevious = () => {
-    setStep(step - 1);
+    setStep(prev => prev - 1);
   };
-
+  console.log({step})
   return (
     <Container>
       <ProgressiveBar step={step} />
+      <FlexBox>
       {step === 1 && (
         <FirstStep
           safeName={safeName}
@@ -61,6 +68,7 @@ const OnBoarding = () => {
           previous={handlePrevious}
         />
       )}
+      </FlexBox>
     </Container>
   );
 };

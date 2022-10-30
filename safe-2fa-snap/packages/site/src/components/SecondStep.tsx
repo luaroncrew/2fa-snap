@@ -93,7 +93,6 @@ const SecondStep = ({ onSubmit, previous }: SecondStepProps) => {
 
   return (
     <Wrapper>
-      <h1>Second step</h1>
       <IExecLogo />
       <h2 style={{ marginBottom: '40px' }}>
         Your 2FA secret was generated and <br /> stored on an iExec app

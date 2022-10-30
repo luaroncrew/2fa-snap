@@ -21,8 +21,10 @@ const WrapperFirstStep = styled.div`
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 50px;
 `;
+
 
 const FirstStep = ({
   safeName,

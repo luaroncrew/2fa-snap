@@ -25,16 +25,16 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
-  left: 170px;
+  padding: 50px 0;
 `;
 
 const ProgressiveBar = ({ step }: ProgressiveBarProps) => {
+  console.log({step})
   return (
     <Wrapper>
       <StepRound style={{ backgroundColor: '#008C73' }}>1</StepRound>
-      <Bar style={{ backgroundColor: step >= 2 ? '#008C73' : 'null' }} />
-      <StepRound style={{ backgroundColor: step >= 2 ? '#008C73' : 'null' }}>
+      <Bar style={{ backgroundColor: step >= 2 ? '#008C73' : 'white' }} />
+      <StepRound style={{ backgroundColor: step >= 2 ? '#008C73' : 'rgba(191, 186, 186, 0.5)' }}>
         2
       </StepRound>
       <Bar style={{ backgroundColor: step >= 3 ? '#008C73' : 'null' }} />
