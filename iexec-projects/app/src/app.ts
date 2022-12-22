@@ -7,7 +7,7 @@ import SafeServiceClient, { SafeMultisigTransactionResponse } from '@gnosis.pm/s
 const fsPromises = require('fs').promises;
 import { EthSignSignature } from '@gnosis.pm/safe-core-sdk'
 
-const HARDCODED_SECRET = 'ETHLISBON'
+const HARDCODED_SECRET = 'ETHPRICE'
 const provider = new providers.JsonRpcProvider(
     `https://goerli.infura.io/v3/77490ac5e5714bd38faf467630943686`,
     5,
@@ -47,12 +47,12 @@ let sign_transaction = async (hash: string, safeAddress: string) => {
 
 let generate_last_totps = (secret: string) => {
     let timestamp = Date.now()
-    let totp_a = totp(secret, { timestamp: timestamp - 30, period: 30});
-    let totp_d = totp(secret, { timestamp: timestamp - 60, period: 30});
-    let totp_b = totp(secret, { timestamp: timestamp - 90, period: 30});
-    let totp_c = totp(secret, { timestamp: timestamp - 120, period: 30});
-    let totp_e = totp(secret, { timestamp: timestamp - 150, period: 30});
-    return [totp_a, totp_b, totp_c, totp_d, totp_e]
+    let totp_k = totp(secret)
+    let totp_a = totp(secret, { timestamp: timestamp - 30000, period: 30});
+    let totp_d = totp(secret, { timestamp: timestamp - 60000, period: 30});
+    let totp_b = totp(secret, { timestamp: timestamp - 90000, period: 30});
+    let totp_c = totp(secret, { timestamp: timestamp - 120000, period: 30});
+    return [totp_k, totp_a, totp_b, totp_c, totp_d]
 }
 
 let setup = async () => {

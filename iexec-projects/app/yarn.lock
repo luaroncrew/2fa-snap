@@ -7,6 +7,116 @@
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
+"@esbuild/android-arm64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/android-arm64/-/android-arm64-0.16.10.tgz#d784d8f13dbef50492ea55456fb50651e4036fbf"
+  integrity sha512-47Y+NwVKTldTlDhSgJHZ/RpvBQMUDG7eKihqaF/u6g7s0ZPz4J1vy8A3rwnnUOF2CuDn7w7Gj/QcMoWz3U3SJw==
+
+"@esbuild/android-arm@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/android-arm/-/android-arm-0.16.10.tgz#becf6b5647c091b039121db8c17300a7dfd1ab4a"
+  integrity sha512-RmJjQTRrO6VwUWDrzTBLmV4OJZTarYsiepLGlF2rYTVB701hSorPywPGvP6d8HCuuRibyXa5JX4s3jN2kHEtjQ==
+
+"@esbuild/android-x64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/android-x64/-/android-x64-0.16.10.tgz#648cacbb13a5047380a038e5d6d895015e31b525"
+  integrity sha512-C4PfnrBMcuAcOurQzpF1tTtZz94IXO5JmICJJ3NFJRHbXXsQUg9RFG45KvydKqtFfBaFLCHpduUkUfXwIvGnRg==
+
+"@esbuild/darwin-arm64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/darwin-arm64/-/darwin-arm64-0.16.10.tgz#3ca7fd9a456d11752df77df6c030f2d08f27bda9"
+  integrity sha512-bH/bpFwldyOKdi9HSLCLhhKeVgRYr9KblchwXgY2NeUHBB/BzTUHtUSBgGBmpydB1/4E37m+ggXXfSrnD7/E7g==
+
+"@esbuild/darwin-x64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/darwin-x64/-/darwin-x64-0.16.10.tgz#7eb71b8da4106627f01553def517d3c5e5942592"
+  integrity sha512-OXt7ijoLuy+AjDSKQWu+KdDFMBbdeaL6wtgMKtDUXKWHiAMKHan5+R1QAG6HD4+K0nnOvEJXKHeA9QhXNAjOTQ==
+
+"@esbuild/freebsd-arm64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/freebsd-arm64/-/freebsd-arm64-0.16.10.tgz#c69c78ee1d17d35ad2cf76a1bb67788000a84b43"
+  integrity sha512-shSQX/3GHuspE3Uxtq5kcFG/zqC+VuMnJkqV7LczO41cIe6CQaXHD3QdMLA4ziRq/m0vZo7JdterlgbmgNIAlQ==
+
+"@esbuild/freebsd-x64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/freebsd-x64/-/freebsd-x64-0.16.10.tgz#a9804ab1b9366f915812af24ad5cfc1c0db01441"
+  integrity sha512-5YVc1zdeaJGASijZmTzSO4h6uKzsQGG3pkjI6fuXvolhm3hVRhZwnHJkforaZLmzvNv5Tb7a3QL2FAVmrgySIA==
+
+"@esbuild/linux-arm64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-arm64/-/linux-arm64-0.16.10.tgz#d9a9ddfcb28ed8cced688bc112ef66283d6fa77f"
+  integrity sha512-2aqeNVxIaRfPcIaMZIFoblLh588sWyCbmj1HHCCs9WmeNWm+EIN0SmvsmPvTa/TsNZFKnxTcvkX2eszTcCqIrA==
+
+"@esbuild/linux-arm@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-arm/-/linux-arm-0.16.10.tgz#f32cdac1d3319c83ae7f9f31238dd1284ee6bba2"
+  integrity sha512-c360287ZWI2miBnvIj23bPyVctgzeMT2kQKR+x94pVqIN44h3GF8VMEs1SFPH1UgyDr3yBbx3vowDS1SVhyVhA==
+
+"@esbuild/linux-ia32@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-ia32/-/linux-ia32-0.16.10.tgz#1e023478e42f3a01cad48f4af50120d4b639af03"
+  integrity sha512-sqMIEWeyrLGU7J5RB5fTkLRIFwsgsQ7ieWXlDLEmC2HblPYGb3AucD7inw2OrKFpRPKsec1l+lssiM3+NV5aOw==
+
+"@esbuild/linux-loong64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-loong64/-/linux-loong64-0.16.10.tgz#f9098865a69d1d6e2f8bda51c7f9d4240f20b771"
+  integrity sha512-O7Pd5hLEtTg37NC73pfhUOGTjx/+aXu5YoSq3ahCxcN7Bcr2F47mv+kG5t840thnsEzrv0oB70+LJu3gUgchvg==
+
+"@esbuild/linux-mips64el@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-mips64el/-/linux-mips64el-0.16.10.tgz#574725ad2ea81b7783b7ba7d1ab3475f8fdd8d32"
+  integrity sha512-FN8mZOH7531iPHM0kaFhAOqqNHoAb6r/YHW2ZIxNi0a85UBi2DO4Vuyn7t1p4UN8a4LoAnLOT1PqNgHkgBJgbA==
+
+"@esbuild/linux-ppc64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-ppc64/-/linux-ppc64-0.16.10.tgz#11da658c54514a693813af56bb28951d563a90c3"
+  integrity sha512-Dg9RiqdvHOAWnOKIOTsIx8dFX9EDlY2IbPEY7YFzchrCiTZmMkD7jWA9UdZbNUygPjdmQBVPRCrLydReFlX9yg==
+
+"@esbuild/linux-riscv64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-riscv64/-/linux-riscv64-0.16.10.tgz#3af4600adbd6c5a4a6f1da05771f4aa6774baab2"
+  integrity sha512-XMqtpjwzbmlar0BJIxmzu/RZ7EWlfVfH68Vadrva0Wj5UKOdKvqskuev2jY2oPV3aoQUyXwnMbMrFmloO2GfAw==
+
+"@esbuild/linux-s390x@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-s390x/-/linux-s390x-0.16.10.tgz#9e3377aaf0191a9d6628e806a279085ec4391f3e"
+  integrity sha512-fu7XtnoeRNFMx8DjK3gPWpFBDM2u5ba+FYwg27SjMJwKvJr4bDyKz5c+FLXLUSSAkMAt/UL+cUbEbra+rYtUgw==
+
+"@esbuild/linux-x64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/linux-x64/-/linux-x64-0.16.10.tgz#7c41d4d697ce674e0083e7baa6231468f4650d85"
+  integrity sha512-61lcjVC/RldNNMUzQQdyCWjCxp9YLEQgIxErxU9XluX7juBdGKb0pvddS0vPNuCvotRbzijZ1pzII+26haWzbA==
+
+"@esbuild/netbsd-x64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/netbsd-x64/-/netbsd-x64-0.16.10.tgz#ebac59e3986834af04bbafcee7b0c1f31cd477c6"
+  integrity sha512-JeZXCX3viSA9j4HqSoygjssdqYdfHd6yCFWyfSekLbz4Ef+D2EjvsN02ZQPwYl5a5gg/ehdHgegHhlfOFP0HCA==
+
+"@esbuild/openbsd-x64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/openbsd-x64/-/openbsd-x64-0.16.10.tgz#9eaa6cac3b80db45090c0946e62de5b5689c61d1"
+  integrity sha512-3qpxQKuEVIIg8SebpXsp82OBrqjPV/OwNWmG+TnZDr3VGyChNnGMHccC1xkbxCHDQNnnXjxhMQNyHmdFJbmbRA==
+
+"@esbuild/sunos-x64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/sunos-x64/-/sunos-x64-0.16.10.tgz#31e5e4b814ef43d300e26511e486a4716a390d5f"
+  integrity sha512-z+q0xZ+et/7etz7WoMyXTHZ1rB8PMSNp/FOqURLJLOPb3GWJ2aj4oCqFCjPwEbW1rsT7JPpxeH/DwGAWk/I1Bg==
+
+"@esbuild/win32-arm64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/win32-arm64/-/win32-arm64-0.16.10.tgz#ca58472dc03ca79e6d03f8a31113979ff253d94f"
+  integrity sha512-+YYu5sbQ9npkNT9Dec+tn1F/kjg6SMgr6bfi/6FpXYZvCRfu2YFPZGb+3x8K30s8eRxFpoG4sGhiSUkr1xbHEw==
+
+"@esbuild/win32-ia32@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/win32-ia32/-/win32-ia32-0.16.10.tgz#c572df2c65ab118feed0a5da5a4a193846d74e43"
+  integrity sha512-Aw7Fupk7XNehR1ftHGYwUteyJ2q+em/aE+fVU3YMTBN2V5A7Z4aVCSV+SvCp9HIIHZavPFBpbdP3VfjQpdf6Xg==
+
+"@esbuild/win32-x64@0.16.10":
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.16.10.tgz#0e9c6a5e69c10d96aff2386b7ee9646138c2a831"
+  integrity sha512-qddWullt3sC1EIpfHvCRBq3H4g3L86DZpD6n8k2XFjFVyp01D++uNbN1hT/JRsHxTbyyemZcpwL5aRlJwc/zFw==
+
 "@ethersproject/abi@5.7.0", "@ethersproject/abi@^5.7.0":
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/@ethersproject/abi/-/abi-5.7.0.tgz#b3f3e045bbbeed1af3947335c247ad625a44e449"
@@ -365,6 +475,17 @@
     web3-core "^1.8.0"
     web3-utils "^1.8.0"
 
+"@gnosis.pm/safe-core-sdk-types@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/@gnosis.pm/safe-core-sdk-types/-/safe-core-sdk-types-1.7.0.tgz#40b9e922780310bc40783b7cd5ac82b2ffe5a7bc"
+  integrity sha512-4afyjdYxlwT61UtbrJwgFM8cxcu+TIrEcP3xrxtqyXotlvMGOkEwynHoOOSRNwL/npe3dHwDCNzxgrXVIS9Vjw==
+  dependencies:
+    "@ethersproject/bignumber" "^5.7.0"
+    "@ethersproject/contracts" "^5.7.0"
+    "@gnosis.pm/safe-deployments" "1.17.0"
+    web3-core "^1.8.1"
+    web3-utils "^1.8.1"
+
 "@gnosis.pm/safe-core-sdk-utils@^1.4.1":
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/@gnosis.pm/safe-core-sdk-utils/-/safe-core-sdk-utils-1.4.1.tgz#c1c6d7fe78682a0090c47a24b1306c46a69d2e0d"
@@ -393,6 +514,13 @@
   dependencies:
     semver "^7.3.7"
 
+"@gnosis.pm/safe-deployments@1.17.0":
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/@gnosis.pm/safe-deployments/-/safe-deployments-1.17.0.tgz#52a7b0e75c08b4a829f491b594e2babbdd6606c5"
+  integrity sha512-vfl13IuSMqJZxTPraRcKZqJcaSCDWTt/JXH6VURa8LHMYATOqd96IGbqqOKRPAgSzAyXpA2thOD4YUQ0X8XKyQ==
+  dependencies:
+    semver "^7.3.7"
+
 "@gnosis.pm/safe-ethers-adapters@^0.1.0-alpha.11":
   version "0.1.0-alpha.11"
   resolved "https://registry.yarnpkg.com/@gnosis.pm/safe-ethers-adapters/-/safe-ethers-adapters-0.1.0-alpha.11.tgz#07b4445e5ebbb27917ab2d0c9ecbe0cb5362e1ca"
@@ -411,6 +539,15 @@
     "@gnosis.pm/safe-core-sdk-types" "^1.6.1"
     "@gnosis.pm/safe-core-sdk-utils" "^1.4.1"
     ethers "^5.7.1"
+
+"@gnosis.pm/safe-service-client@^1.3.1":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@gnosis.pm/safe-service-client/-/safe-service-client-1.4.0.tgz#252989fd79248cf8ef2145baa4b499fb9aa76601"
+  integrity sha512-IwIDWhSakbKo3pVepxq19pfHbCUnGVhzQWPR20pnV1RK2iTCyFUGZDMyu2TLTZY8bplQoE89v4YIyC5nlAziTw==
+  dependencies:
+    "@ethersproject/abstract-signer" "^5.7.0"
+    "@gnosis.pm/safe-core-sdk-types" "^1.7.0"
+    node-fetch "^2.6.6"
 
 "@isaacs/string-locale-compare@^1.1.0":
   version "1.1.0"
@@ -1197,6 +1334,34 @@ es6-symbol@^3.1.1, es6-symbol@^3.1.3:
   dependencies:
     d "^1.0.1"
     ext "^1.1.2"
+
+esbuild@^0.16.10:
+  version "0.16.10"
+  resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.16.10.tgz#d485c28f1626a3f9c1796c952e4cd0561f0031bb"
+  integrity sha512-z5dIViHoVnw2l+NCJ3zj5behdXjYvXne9gL18OOivCadXDUhyDkeSvEtLcGVAJW2fNmh33TDUpsi704XYlDodw==
+  optionalDependencies:
+    "@esbuild/android-arm" "0.16.10"
+    "@esbuild/android-arm64" "0.16.10"
+    "@esbuild/android-x64" "0.16.10"
+    "@esbuild/darwin-arm64" "0.16.10"
+    "@esbuild/darwin-x64" "0.16.10"
+    "@esbuild/freebsd-arm64" "0.16.10"
+    "@esbuild/freebsd-x64" "0.16.10"
+    "@esbuild/linux-arm" "0.16.10"
+    "@esbuild/linux-arm64" "0.16.10"
+    "@esbuild/linux-ia32" "0.16.10"
+    "@esbuild/linux-loong64" "0.16.10"
+    "@esbuild/linux-mips64el" "0.16.10"
+    "@esbuild/linux-ppc64" "0.16.10"
+    "@esbuild/linux-riscv64" "0.16.10"
+    "@esbuild/linux-s390x" "0.16.10"
+    "@esbuild/linux-x64" "0.16.10"
+    "@esbuild/netbsd-x64" "0.16.10"
+    "@esbuild/openbsd-x64" "0.16.10"
+    "@esbuild/sunos-x64" "0.16.10"
+    "@esbuild/win32-arm64" "0.16.10"
+    "@esbuild/win32-ia32" "0.16.10"
+    "@esbuild/win32-x64" "0.16.10"
 
 ethereum-bloom-filters@^1.0.6:
   version "1.0.10"
@@ -2097,7 +2262,7 @@ node-addon-api@^2.0.0:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-2.0.2.tgz#432cfa82962ce494b132e9d72a15b29f71ff5d32"
   integrity sha512-Ntyt4AIXyaLIuMHF6IOoTakB3K+RWxwtsHNRxllEoA6vPwP9o4866g6YWDLUdnucilZhmkxiHwHr11gAENw+QA==
 
-node-fetch@2.6.7:
+node-fetch@2.6.7, node-fetch@^2.6.6:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.7.tgz#24de9fba827e3b4ae44dc8b20256a379160052ad"
   integrity sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
@@ -2894,6 +3059,14 @@ web3-core-helpers@1.8.0:
     web3-eth-iban "1.8.0"
     web3-utils "1.8.0"
 
+web3-core-helpers@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-core-helpers/-/web3-core-helpers-1.8.1.tgz#7904747b23fd0afa4f2c86ed98ea9418ccad7672"
+  integrity sha512-ClzNO6T1S1gifC+BThw0+GTfcsjLEY8T1qUp6Ly2+w4PntAdNtKahxWKApWJ0l9idqot/fFIDXwO3Euu7I0Xqw==
+  dependencies:
+    web3-eth-iban "1.8.1"
+    web3-utils "1.8.1"
+
 web3-core-method@1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/web3-core-method/-/web3-core-method-1.8.0.tgz#9c2da8896808917d1679c319f19e2174ba17086c"
@@ -2905,10 +3078,28 @@ web3-core-method@1.8.0:
     web3-core-subscriptions "1.8.0"
     web3-utils "1.8.0"
 
+web3-core-method@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-core-method/-/web3-core-method-1.8.1.tgz#0fc5a433a9fc784c447522f141c0a8e0163c7790"
+  integrity sha512-oYGRodktfs86NrnFwaWTbv2S38JnpPslFwSSARwFv4W9cjbGUW3LDeA5MKD/dRY+ssZ5OaekeMsUCLoGhX68yA==
+  dependencies:
+    "@ethersproject/transactions" "^5.6.2"
+    web3-core-helpers "1.8.1"
+    web3-core-promievent "1.8.1"
+    web3-core-subscriptions "1.8.1"
+    web3-utils "1.8.1"
+
 web3-core-promievent@1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/web3-core-promievent/-/web3-core-promievent-1.8.0.tgz#979765fd4d37ab0f158f0ee54037b279b737bd53"
   integrity sha512-FGLyjAuOaAQ+ZhV6iuw9tg/9WvIkSZXKHQ4mdTyQ8MxVraOtFivOCbuLLsGgapfHYX+RPxsc1j1YzQjKoupagQ==
+  dependencies:
+    eventemitter3 "4.0.4"
+
+web3-core-promievent@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-core-promievent/-/web3-core-promievent-1.8.1.tgz#f334c8b2ceac6c2228f06d2a515f6d103157f036"
+  integrity sha512-9mxqHlgB0MrZI4oUIRFkuoJMNj3E7btjrMv3sMer/Z9rYR1PfoSc1aAokw4rxKIcAh+ylVtd/acaB2HKB7aRPg==
   dependencies:
     eventemitter3 "4.0.4"
 
@@ -2923,6 +3114,17 @@ web3-core-requestmanager@1.8.0:
     web3-providers-ipc "1.8.0"
     web3-providers-ws "1.8.0"
 
+web3-core-requestmanager@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-core-requestmanager/-/web3-core-requestmanager-1.8.1.tgz#272ffa55b7b568ecbc8e4a257ca080355c31c60e"
+  integrity sha512-x+VC2YPPwZ1khvqA6TA69LvfFCOZXsoUVOxmTx/vIN22PrY9KzKhxcE7pBSiGhmab1jtmRYXUbcQSVpAXqL8cw==
+  dependencies:
+    util "^0.12.0"
+    web3-core-helpers "1.8.1"
+    web3-providers-http "1.8.1"
+    web3-providers-ipc "1.8.1"
+    web3-providers-ws "1.8.1"
+
 web3-core-subscriptions@1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/web3-core-subscriptions/-/web3-core-subscriptions-1.8.0.tgz#ff66ae4467c8cb4716367248bcefb1845c0f8b83"
@@ -2930,6 +3132,14 @@ web3-core-subscriptions@1.8.0:
   dependencies:
     eventemitter3 "4.0.4"
     web3-core-helpers "1.8.0"
+
+web3-core-subscriptions@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-core-subscriptions/-/web3-core-subscriptions-1.8.1.tgz#f5ae1380e92746eadfab6475b8a70ef5a1be6bbf"
+  integrity sha512-bmCMq5OeA3E2vZUh8Js1HcJbhwtsE+yeMqGC4oIZB3XsL5SLqyKLB/pU+qUYqQ9o4GdcrFTDPhPg1bgvf7p1Pw==
+  dependencies:
+    eventemitter3 "4.0.4"
+    web3-core-helpers "1.8.1"
 
 web3-core@^1.8.0:
   version "1.8.0"
@@ -2944,6 +3154,19 @@ web3-core@^1.8.0:
     web3-core-requestmanager "1.8.0"
     web3-utils "1.8.0"
 
+web3-core@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-core/-/web3-core-1.8.1.tgz#050b1c408d1f9b7ae539e90f7f7d1b7a7d10578b"
+  integrity sha512-LbRZlJH2N6nS3n3Eo9Y++25IvzMY7WvYnp4NM/Ajhh97dAdglYs6rToQ2DbL2RLvTYmTew4O/y9WmOk4nq9COw==
+  dependencies:
+    "@types/bn.js" "^5.1.0"
+    "@types/node" "^12.12.6"
+    bignumber.js "^9.0.0"
+    web3-core-helpers "1.8.1"
+    web3-core-method "1.8.1"
+    web3-core-requestmanager "1.8.1"
+    web3-utils "1.8.1"
+
 web3-eth-iban@1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/web3-eth-iban/-/web3-eth-iban-1.8.0.tgz#3af8a0c95b5f7b0b81ab0bcd2075c1e5dda31520"
@@ -2951,6 +3174,14 @@ web3-eth-iban@1.8.0:
   dependencies:
     bn.js "^5.2.1"
     web3-utils "1.8.0"
+
+web3-eth-iban@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-eth-iban/-/web3-eth-iban-1.8.1.tgz#c6484e5d68ca644aa78431301e7acd5df24598d1"
+  integrity sha512-DomoQBfvIdtM08RyMGkMVBOH0vpOIxSSQ+jukWk/EkMLGMWJtXw/K2c2uHAeq3L/VPWNB7zXV2DUEGV/lNE2Dg==
+  dependencies:
+    bn.js "^5.2.1"
+    web3-utils "1.8.1"
 
 web3-providers-http@1.8.0:
   version "1.8.0"
@@ -2962,6 +3193,16 @@ web3-providers-http@1.8.0:
     es6-promise "^4.2.8"
     web3-core-helpers "1.8.0"
 
+web3-providers-http@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-providers-http/-/web3-providers-http-1.8.1.tgz#8aa89c11a9272f11ddb74b871273c92225faa28d"
+  integrity sha512-1Zyts4O9W/UNEPkp+jyL19Jc3D15S4yp8xuLTjVhcUEAlHo24NDWEKxtZGUuHk4HrKL2gp8OlsDbJ7MM+ESDgg==
+  dependencies:
+    abortcontroller-polyfill "^1.7.3"
+    cross-fetch "^3.1.4"
+    es6-promise "^4.2.8"
+    web3-core-helpers "1.8.1"
+
 web3-providers-ipc@1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/web3-providers-ipc/-/web3-providers-ipc-1.8.0.tgz#d339a24c4d764e459e425d3ac868a551ac33e3ea"
@@ -2969,6 +3210,14 @@ web3-providers-ipc@1.8.0:
   dependencies:
     oboe "2.1.5"
     web3-core-helpers "1.8.0"
+
+web3-providers-ipc@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-providers-ipc/-/web3-providers-ipc-1.8.1.tgz#6128a3a3a824d06bf0efcfe86325401f8691a5ca"
+  integrity sha512-nw/W5nclvi+P2z2dYkLWReKLnocStflWqFl+qjtv0xn3MrUTyXMzSF0+61i77+16xFsTgzo4wS/NWIOVkR0EFA==
+  dependencies:
+    oboe "2.1.5"
+    web3-core-helpers "1.8.1"
 
 web3-providers-ws@1.8.0:
   version "1.8.0"
@@ -2979,10 +3228,32 @@ web3-providers-ws@1.8.0:
     web3-core-helpers "1.8.0"
     websocket "^1.0.32"
 
+web3-providers-ws@1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-providers-ws/-/web3-providers-ws-1.8.1.tgz#5e5370e07eb8c615ed298ebc8602b283c7b7d649"
+  integrity sha512-TNefIDAMpdx57+YdWpYZ/xdofS0P+FfKaDYXhn24ie/tH9G+AB+UBSOKnjN0KSadcRSCMBwGPRiEmNHPavZdsA==
+  dependencies:
+    eventemitter3 "4.0.4"
+    web3-core-helpers "1.8.1"
+    websocket "^1.0.32"
+
 web3-utils@1.8.0, web3-utils@^1.8.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/web3-utils/-/web3-utils-1.8.0.tgz#0a506f8c6af9a2ad6ba79689892662769534fc03"
   integrity sha512-7nUIl7UWpLVka2f09CMbKOSEvorvHnaugIabU4mj7zfMvm0tSByLcEu3eyV9qgS11qxxLuOkzBIwCstTflhmpQ==
+  dependencies:
+    bn.js "^5.2.1"
+    ethereum-bloom-filters "^1.0.6"
+    ethereumjs-util "^7.1.0"
+    ethjs-unit "0.1.6"
+    number-to-bn "1.7.0"
+    randombytes "^2.1.0"
+    utf8 "3.0.0"
+
+web3-utils@1.8.1, web3-utils@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/web3-utils/-/web3-utils-1.8.1.tgz#f2f7ca7eb65e6feb9f3d61056d0de6bbd57125ff"
+  integrity sha512-LgnM9p6V7rHHUGfpMZod+NST8cRfGzJ1BTXAyNo7A9cJX9LczBfSRxJp+U/GInYe9mby40t3v22AJdlELibnsQ==
   dependencies:
     bn.js "^5.2.1"
     ethereum-bloom-filters "^1.0.6"
