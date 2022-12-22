@@ -66,7 +66,7 @@ export const doTransaction = async (transactionData: any) => {
     params: [
       defaultSnapOrigin,
       {
-        method: '2FA_transaction',
+        method: '2fa',
         params: [
           transactionData
         ],
