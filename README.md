@@ -5,7 +5,7 @@ is a decentralized 2FA system to get a higher level of security when interacting
 2fa verification is done by an application that runs on the iExec decentralized infrastructure. 
 The application is called by Metamask when the user wants to execute a transaction.
 
-Specifications are available [here]("specifications.md").
+Specifications are available [here](https://github.com/cedelabs/2fa-snap/blob/main/specifications.md).
 
 ## This project contains several modules:
 - iexec-projects - 2fa verifier running on a decentralized computation platform iExec
@@ -19,14 +19,19 @@ To launch Metamask Extension:
 - ```yarn setup``` 
 - ```yarn start --build-type=flask``` 
 
-To launch safe-2fa-snap:
+To launch safe-2fa-snap UI:
 - ```yarn```
 - ```yarn start``` 
+Then navigate to http://localhost:8000/onBoarding to setup the 2fa code
+- First, add guardians (they can help you to recover your account if you lost your 2fa code)
+- Then, generate a 2fa code
+- Scan the QR code with you 2fa App (Google Authenticator, Authy, etc.)
+- Enter the 2fa code in the input field
 
-To deploy and launch AWS services:
-- ```yarn build && cdk deploy```
-
-
+## Things to do to finish the project
+- Resolve snaps issue:
+  - Due to the usage of `yup` dependency by iExec SDK, snap build fails. It's due to the SES building environement. (https://docs.metamask.io/guide/snaps-development-guide.html#developing-a-snap)
+- Implement Guardian recovery
 
 ## test iexec app, interfaces
 the last version of the app is deployed on "bellecour" chain with the address below:
