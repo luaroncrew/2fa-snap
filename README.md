@@ -1,6 +1,11 @@
 ## Pastel de Meta 
 is a decentralized 2FA system to get a higher level of security when interacting with the Ethereum space through Metamask.
 
+### How it works
+2fa verification is done by an application that runs on the iExec decentralized infrastructure. 
+The application is called by Metamask when the user wants to execute a transaction.
+
+Specifications are available [here]("specifications.md").
 
 ## This project contains several modules:
 - iexec-projects - 2fa verifier running on a decentralized computation platform iExec

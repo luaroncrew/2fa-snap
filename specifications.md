@@ -4,14 +4,14 @@
 
 1. User calls the setup method of the iExec app
    - The app generates a random 16 bytes secret to encrypt the user's secrets
-   - The app generates a private key
-   - The app generates a random 6-digit code
-   - The app stores user's secrets and returns the 6-digit code and the public key
+   - The app generates a private key (used to sign transactions with Safe)
+   - The app generates a random secret for the TOTP code
+   - The app stores user's encrypted secrets and returns the TOTP secret and the public key of the previously generated private key
 2. UI shows the generated QR code representing the next string: `otpauth://totp/De2FA?secret=${secret}&issuer=${issuer}`
 3. User scans the QR code with the authenticator app to add the secret
-4. User enters the 6-digit code from the authenticator app generated from the secret
+4. User enters the 6-digit code from the authenticator app generated from the secret ot verify its validity
 5. UI calls Metamask to sign the transaction to create a new Safe contract with 2 addresses:
-   - The first address is the user's address
+   - The first address is the user's address (in Metamask)
    - The second address is the address of the private key generated in step 1
 
 
