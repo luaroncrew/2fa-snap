@@ -4,7 +4,6 @@ import FirstStep from '../components/FirstStep';
 import SecondStep from '../components/SecondStep';
 import ThirdStep from '../components/ThirdStep';
 import ProgressiveBar from '../components/ProgressiveBar';
-import { generate2fa } from '../../utils/generate-2fa';
 import { verify2fa } from '../../utils/verify-2fa';
 import {ethers} from "ethers";
 import {createSafe} from "../../utils/create-safe";
@@ -58,13 +57,12 @@ const OnBoarding = () => {
       return;
     }
 
-    const data2Fa = await generate2fa(accounts[0]);
-    const { secret, iExecPubKey } = data2Fa.data.getSecretById;
-    const address = ethers.utils.computeAddress( iExecPubKey )
+    // const data2Fa = await generate2fa(accounts[0]);
+    // const { secret, iExecPubKey } = data2Fa.data.getSecretById;
+    // const address = ethers.utils.computeAddress( iExecPubKey )
+    const secret = "ETHPRICE";
     setUrl2FA(`otpauth://totp/De2FA?secret=${secret}&issuer=Example`);
-    setiExecAddress(address);
-    console.log({ iExecAddress: address });
-    nextStep();
+    nextStep()
   };
 
   const onSubmitSecondStep = async () => {
@@ -77,9 +75,9 @@ const OnBoarding = () => {
       return;
     }
 
-    const res = await verify2fa(accounts[0], totp);
+    const codeIsValid = await verify2fa(accounts[0], totp);
 
-    if(!res.data.checkSecret) {
+    if(!codeIsValid) {
       alert("Code isn't valid")
       return
     }
