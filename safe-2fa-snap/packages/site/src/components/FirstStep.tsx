@@ -25,19 +25,19 @@ const FormContainer = styled.div`
   gap: 50px;
 `;
 
-const initialGuardianState: string[] = [];
+const initialGuardianState : string[] = []
 const GUARDIAN_ACTIONS = {
-  ADD: 'ADD_GUARDIAN',
-  EDIT: 'EDIT_GUARDIAN',
-};
+  ADD: "ADD_GUARDIAN",
+  EDIT: "EDIT_GUARDIAN"
+}
 function guardianReducer(state: any, action: any) {
-  console.log({ prev: state });
+  console.log({prev : state})
   switch (action.type) {
     case GUARDIAN_ACTIONS.ADD:
-      return [...state, ''];
+      return [...state, ""]
     case GUARDIAN_ACTIONS.EDIT:
-      state[action.index] = action.value;
-      return [...state];
+      state[action.index] = action.value
+      return [...state]
   }
 }
 
@@ -49,17 +49,15 @@ const FirstStep = ({
   onSubmit,
 }: FirstStepProps) => {
   const [disable, setDisabled] = useState<boolean>(true);
-  const [guardians, dispatchGuardians] = useReducer(
-    guardianReducer,
-    initialGuardianState,
-  );
+  const [iExecAddress, setiExecAddress] = useState<string>('');
+  const [guardians, dispatchGuardians] = useReducer(guardianReducer, initialGuardianState)
 
   const addGuardian = () => {
-    dispatchGuardians({ type: GUARDIAN_ACTIONS.ADD });
-  };
+    dispatchGuardians({type: GUARDIAN_ACTIONS.ADD})
+  }
 
   useEffect(() => {
-    if (guardians?.length && guardians.every((v) => v)) {
+    if (guardians?.length && guardians.every(v => v)) {
       return setDisabled(false);
     }
     return setDisabled(true);
@@ -69,16 +67,22 @@ const FirstStep = ({
       <SafeLogo width={'100px'} />
       <h2>SAFE setup</h2>
       <FormContainer>
-        {(guardians || []).map((guardian, index) => (
-          <InputText
-            key={index}
-            input={guardian}
-            setInput={(value) =>
-              dispatchGuardians({ type: GUARDIAN_ACTIONS.EDIT, index, value })
-            }
-            placeHolder={'iExec’s address: to be verified'}
-          />
-        ))}
+        {
+          (guardians || []).map((guardian, index) => (
+            <InputText
+              key={index}
+              input={guardian}
+              setInput={(value)=> dispatchGuardians({type: GUARDIAN_ACTIONS.EDIT, index, value})}
+              placeHolder={'iExec’s address: to be verified'}
+            />
+          ))
+        }
+        <InputText
+          input={iExecAddress}
+          setInput={setiExecAddress}
+          placeHolder={'iExec’s address: to be verified'}
+          disabled={true}
+        />
         <PrimaryButton
           disabled={false}
           content={'Add guardian'}
